@@ -1,0 +1,32 @@
+--1
+--SELECT p.name, pr.name 
+--FROM Product p RIGHT OUTER JOIN Producer pr ON p.id_producer = pr.id
+
+--2
+--SELECT c.name 
+--FROM Category c
+--LEFT JOIN Product p ON c.id = p.id_category
+--WHERE p.id_category IS NULL
+
+--3
+--SELECT r.name 
+--FROM Region r
+
+--EXCEPT
+--SELECT DISTINCT r.name
+--FROM Region r
+--JOIN City c ON r.id = c.id_region
+--JOIN Address a ON c.id = a.id_city
+--JOIN Producer pr ON a.id = pr.id_address
+
+--4
+--SELECT name
+--FROM Category
+
+--EXCEPT
+--SELECT c.name 
+--FROM Category c
+--JOIN Product p ON c.id = p.id_category
+--JOIN Producer pr ON p.id_producer = pr.id
+--WHERE pr.name = 'Львовские Продукты'
+
